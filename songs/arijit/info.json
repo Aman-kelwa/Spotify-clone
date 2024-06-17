@@ -1,4 +1,11 @@
 {
-    "title":"Arijit singh songs",
-    "description":"Songs for you"
+    "title": "Arijit singh songs",
+    "description": "Songs for you",
+    "songs": [
+        "ANIMAL_ SATRANGA Arijit_Shreyas.mp3",
+        "Arijit Singh X Badshah  - Soulmate.mp3",
+        "HAWAYEIN SONG (ARIJIT SINGH _ PRITAM).mp3",
+        "O Maahi.mp3",
+        "Tera Chehra _Himesh_ Arijit.mp3"
+    ]
 }

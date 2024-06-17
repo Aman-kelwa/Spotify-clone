@@ -1,4 +1,10 @@
 {
-    "title":"Hollywood songs",
-    "description":"English songs for you"
+    "title": "Hollywood songs",
+    "description": "English songs for you",
+    "songs": [
+        "Ed Sheeran - Perfect.mp3",
+        "Ellie Goulding - Love Me Like You Do.mp3",
+        "Justin Bieber - Baby ft. Ludacris.mp3",
+        "Sia - Unstoppable.mp3"
+    ]
 }

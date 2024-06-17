@@ -1,4 +1,11 @@
 {
-    "title":"B praak songs",
-    "description":"Special Songs for you"
+    "title": "B praak songs",
+    "description": "Special Songs for you",
+    "songs": [
+        "B Praak Dholna.mp3",
+        "JEETENGE - Mission Raniganj _ B Praak.mp3",
+        "Jhaanjar BPraak_ Jaani.mp3",
+        "Saari Duniya Jalaa Denge.mp3",
+        "Teri Mitti.mp3"
+    ]
 }
