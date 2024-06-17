@@ -2,6 +2,8 @@ console.log("Lets Write javaScript");
 let songs;
 let currFolder;
 let currentSong = new Audio();
+const baseUrl =
+	"https://raw.githubusercontent.com/Aman-kelwa/Spotify-clone/main";
 
 function secondsToMinutesSeconds(seconds) {
 	if (isNaN(seconds) || seconds < 0) {
@@ -19,9 +21,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
 	currFolder = folder;
-	let a = await fetch(
-		`https://raw.githubusercontent.com/homocodian/Spotify-clone/main/${folder}/info.json`
-	);
+	let a = await fetch(`${baseUrl}/${folder}/info.json`);
 	let response = await a.json();
 
 	// let div = document.createElement("div");
@@ -63,7 +63,6 @@ async function getSongs(folder) {
 		document.querySelector(".song-list").getElementsByTagName("li")
 	).forEach((e) => {
 		e.addEventListener("click", () => {
-			console.log(e.querySelector(".info").firstElementChild.innerHTML.trim());
 			playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
 		});
 	});
@@ -73,7 +72,7 @@ async function getSongs(folder) {
 
 const playMusic = (track, pause = false) => {
 	// let audio = new Audio("/songs/" + track);
-	currentSong.src = `/${currFolder}/` + track;
+	currentSong.src = `${baseUrl}/${currFolder}/` + track;
 
 	if (!pause) {
 		currentSong.play();
@@ -85,9 +84,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-	let a = await fetch(
-		`https://raw.githubusercontent.com/homocodian/Spotify-clone/main/songs/info.json`
-	);
+	let a = await fetch(`${baseUrl}/songs/info.json`);
 	let response = await a.json();
 
 	// let div = document.createElement("div");
@@ -98,9 +95,7 @@ async function displayAlbums() {
 
 	for await (folder of response) {
 		//Get the metadata of the folder
-		let a = await fetch(
-			`https://raw.githubusercontent.com/homocodian/Spotify-clone/main/songs/${folder}/info.json`
-		);
+		let a = await fetch(`${baseUrl}/songs/${folder}/info.json`);
 		let response = await a.json();
 		// console.log(response);
 		cardcontainer.innerHTML =
@@ -109,7 +104,7 @@ async function displayAlbums() {
         <div class="play">
           <img class="btn" src="img/play-button.svg" alt="">
         </div>
-        <img src="/songs/${folder}/cover.jpg" alt="">
+        <img src="${baseUrl}/songs/${folder}/cover.jpg" alt="">
         <h2>${response.title}</h2>
         <p>${response.description}</p>
       </div>`;
@@ -121,7 +116,6 @@ async function displayAlbums() {
 		e.addEventListener("click", async (item) => {
 			console.log("Fetching songs");
 			songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
-			console.log("🚀 ~ e.addEventListener ~ songs:", songs);
 			playMusic(songs[0]);
 		});
 	});
@@ -173,16 +167,16 @@ async function main() {
 
 	//Add event listener to previous song
 	previous.addEventListener("click", () => {
-		console.log(currentSong);
+		// console.log(currentSong);
 		let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
-		console.log(songs, index);
+		// console.log(songs, index);
 		if (index - 1 >= 0) playMusic(songs[index - 1]);
 	});
 	//Add event listener to next song
 	next.addEventListener("click", () => {
 		currentSong.pause();
 		let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
-		console.log(songs, index);
+		// console.log(songs, index);
 		if (index + 1 <= songs.length - 1) playMusic(songs[index + 1]);
 	});
 
