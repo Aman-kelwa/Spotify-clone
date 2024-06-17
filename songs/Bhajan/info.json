@@ -1,4 +1,11 @@
 {
-    "title":"Bhajan songs",
-    "description":"Special Bhajans for you"
+    "title": "Bhajan songs",
+    "description": "Special Bhajans for you",
+    "songs": [
+        "Namo Namo Kedarnath _ Sushant Rajput.mp3",
+        "Raam Aayenge Swati Mishra Bhajan.mp3",
+        "Ram Aayenge Vishal Mishra.mp3",
+        "Sankat Mochan Hanuman.mp3",
+        "Ye Chamak Ye Damak Bhajan.mp3"
+    ]
 }

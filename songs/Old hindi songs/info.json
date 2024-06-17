@@ -1,4 +1,10 @@
 {
-    "title":"Old hindi songs",
-    "description":"Special 80's songs for you"
+    "title": "Old hindi songs",
+    "description": "Special 80's songs for you",
+    "songs": [
+        "Dekha Ek Khawab Kishore Kumar and Lata Mangeshkar.mp3",
+        "Mere Samne Wali Khidki Mein.mp3",
+        "Pal Pal Dil Ke Paas Kishore Kumar.mp3",
+        "Yeh Sham Mastani.mp3"
+    ]
 }

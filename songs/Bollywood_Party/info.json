@@ -1,4 +1,10 @@
 {
-    "title":"Bollywood Party songs",
-    "description":"Lets Dance"
+    "title": "Bollywood Party songs",
+    "description": "Lets Dance",
+    "songs": [
+        "Abhi Toh Party Shuru Hui Hai.mp3",
+        "Gallan Goodiyaan.mp3",
+        "Jai Jai Shivshankar.mp3",
+        "Wakhra Swag.mp3"
+    ]
 }
